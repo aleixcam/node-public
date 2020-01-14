@@ -1,5 +1,8 @@
 FROM alpine:latest
 
+WORKDIR /usr/src
+
 RUN apk add --update nodejs npm
 
-RUN npm i -g yarn jest
+COPY . .
+RUN npm install
