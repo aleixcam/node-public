@@ -1,8 +1,8 @@
 FROM alpine:latest
 
-WORKDIR /usr/src
+WORKDIR /usr/src/app
 
 RUN apk add --update nodejs npm
 
-COPY . .
+COPY package*.json ./
 RUN npm install
